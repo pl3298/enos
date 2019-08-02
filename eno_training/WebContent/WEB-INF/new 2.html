@@ -1,0 +1,39 @@
+import com.matrixone.apps.domain.DomainObject;
+import com.matrixone.apps.domain.util.MapList;
+import matrix.db.Context;
+import matrix.util.MatrixException;
+import matrix.util.StringList;
+
+
+public class ${CLASSNAME}{
+	public static void mxMain(Context ctx,String[] args) {
+		
+	}
+
+	
+	public MapList listTrainings(matrix.db.Context context, String[] args) throws Exception {
+		
+		
+		
+		MapList oblist = new MapList();
+		
+		StringList selectList = new StringList();
+		
+		selectList.addElement("id");	
+		
+		MapList mpl = DomainObject.findObjects(context,"A_Training" ,"*" ,"attribute[A_Duration]>=0",selectList);		
+		
+		return mpl;
+		
+		
+	}
+		public void updateDuration(matrix.db.Context context, String[] args) throws Exception {
+		
+		System.out.println(args[0]);
+		
+		
+		
+		
+		}
+	
+}
